@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuternest | Gameplay & Systems Programmer</title>
+    <!-- Tailwind CSS for rapid, modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#10b981', // Emerald green accent
+                        dark: '#0f172a',  // Deep slate background
+                        card: '#1e293b'   // Lighter slate for cards
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for code blocks */
+        pre::-webkit-scrollbar { height: 8px; width: 8px; }
+        pre::-webkit-scrollbar-track { background: #1e293b; }
+        pre::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        pre::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        
+        .tab-btn.active {
+            border-bottom: 2px solid #10b981;
+            color: #10b981;
+        }
+    </style>
+</head>
+<body class="bg-dark text-slate-300 font-sans antialiased selection:bg-brand selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-white font-bold text-xl tracking-tight">Cuternest<span class="text-brand">.</span></span>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-white transition-colors">Home</a>
+                        <a href="#about" class="hover:text-white transition-colors">About</a>
+                        <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between min-h-[80vh] gap-12">
+        <div class="md:w-3/5 flex flex-col justify-center">
+            <h2 class="text-brand font-semibold tracking-wide uppercase text-sm mb-4">Hello, World. I am</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">Cuternest</h1>
+            <h3 class="text-3xl md:text-5xl font-bold text-slate-500 mb-8">Gameplay & Systems Programmer</h3>
+            <p class="max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
+                I turn complex mechanical problems into clean, scalable systems. I specialize in Object-Oriented architecture, logic optimization, and refactoring tangled scripts into modular, readable code.
+            </p>
+            <div class="flex gap-4">
+                <a href="#projects" class="bg-brand text-dark font-bold py-3 px-8 rounded-lg hover:bg-emerald-400 transition-colors shadow-lg shadow-brand/20">View My Work</a>
+                <a href="#contact" class="border border-slate-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-slate-800 transition-colors">Get in Touch</a>
+            </div>
+        </div>
+        <div class="md:w-2/5 flex justify-center md:justify-end mt-10 md:mt-0">
+            <!-- Avatar Container -->
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-slate-800 overflow-hidden shadow-2xl shadow-brand/20 relative">
+                <!-- Replace 'your_avatar.png' with your actual image file -->
+                <img src="my-avatar.jpg" alt="Cuternest Avatar" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900/50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center">
+                <span class="text-brand mr-2">01.</span> About Me
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 text-lg text-slate-400 leading-relaxed">
+                <div>
+                    <p class="mb-6">
+                        I am a Computer Science student and a dedicated Programmer who focuses entirely on the logic behind the screen. While others might focus on the art, my passion lies in the architecture: building robust, extensible systems using core OOP principles like encapsulation, inheritance, and polymorphism.
+                    </p>
+                    <p>
+                        As a Lead Programmer in collaborative projects, my philosophy is simple: write clean code to avoid spaghetti code. I prioritize readability, enforce DRY (Don't Repeat Yourself) principles, and enjoy untangling logical errors to help my team move forward efficiently.
+                    </p>
+                </div>
+                <div class="bg-card p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-xl font-semibold text-white mb-4"><i class="fa-solid fa-terminal text-brand mr-2"></i> Philosophy</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-brand mt-1 mr-3"></i>
+                            <span><strong>Architecture First:</strong> Building templates and blueprints before writing specific mechanics.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-brand mt-1 mr-3"></i>
+                            <span><strong>Optimization:</strong> Refactoring "God Objects" into modular, single-responsibility functions.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-brand mt-1 mr-3"></i>
+                            <span><strong>Team Enablement:</strong> Creating tools and safe environments for teammates to implement content smoothly.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center">
+            <span class="text-brand mr-2">02.</span> Skills Arsenal
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Skill Cards -->
+            <div class="bg-card p-6 rounded-xl border border-slate-800 hover:-translate-y-2 transition-transform text-center">
+                <i class="fa-brands fa-java text-4xl text-orange-500 mb-4"></i>
+                <h3 class="text-white font-bold mb-2">Java / C++</h3>
+                <p class="text-sm text-slate-400">OOP Architecture</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-800 hover:-translate-y-2 transition-transform text-center">
+                <i class="fa-brands fa-python text-4xl text-blue-400 mb-4"></i>
+                <h3 class="text-white font-bold mb-2">Python & Lua</h3>
+                <p class="text-sm text-slate-400">Scripting & Logic</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-800 hover:-translate-y-2 transition-transform text-center">
+                <i class="fa-solid fa-gamepad text-4xl text-purple-500 mb-4"></i>
+                <h3 class="text-white font-bold mb-2">GameMaker (GML)</h3>
+                <p class="text-sm text-slate-400">Engine Integration</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-800 hover:-translate-y-2 transition-transform text-center">
+                <i class="fa-brands fa-react text-4xl text-cyan-400 mb-4"></i>
+                <h3 class="text-white font-bold mb-2">React & Web</h3>
+                <p class="text-sm text-slate-400">HTML, CSS, JS</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-800 hover:-translate-y-2 transition-transform text-center">
+                <i class="fa-solid fa-code-branch text-4xl text-orange-600 mb-4"></i>
+                <h3 class="text-white font-bold mb-2">Git / GitHub</h3>
+                <p class="text-sm text-slate-400">Version Control</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-800 hover:-translate-y-2 transition-transform text-center">
+                <i class="fa-solid fa-bug text-4xl text-brand mb-4"></i>
+                <h3 class="text-white font-bold mb-2">Debugging</h3>
+                <p class="text-sm text-slate-400">Logic Optimization</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900/50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center">
+                <span class="text-brand mr-2">03.</span> Featured Projects
+            </h2>
+
+            <!-- Project 1: Dungeon Dive -->
+            <div class="mb-24">
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl font-bold text-white mb-2">Dungeon Dive</h3>
+                        <p class="text-brand font-mono text-sm mb-6">Terminal RPG • Solo Programmer • Java / C++</p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            A highly modular turn-based RPG built entirely in the terminal to focus exclusively on backend systems. I engineered complex systems applying the four pillars of OOP. By utilizing abstraction and inheritance, I created base templates for enemies, weapons, and debuffs, allowing for massive content scaling without repetitive hardcoding.
+                        </p>
+                        <ul class="space-y-2 mb-8 text-slate-300">
+                            <li><i class="fa-solid fa-caret-right text-brand mr-2"></i> <strong>Combat Engine:</strong> Damage calc factoring in armor resistance and temporary debuff states.</li>
+                            <li><i class="fa-solid fa-caret-right text-brand mr-2"></i> <strong>Item Management:</strong> HashMaps utilized to manage player items and equipment states.</li>
+                        <li><i class="fa-solid fa-caret-right text-brand mr-2"></i> <strong>Scalability:</strong> Centralized skill cooldown algorithms inherited by all entity types.</li>
+                    </ul>
+                    
+                    <!-- Updated Online Compiler Link with .jar instructions -->
+                    <div class="flex flex-col gap-3">
+                        <a href="https://replit.com/" target="_blank" class="inline-flex items-center bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 px-6 py-3 rounded-lg transition-colors w-fit"><i class="fa-solid fa-play mr-2"></i> Play on Replit</a>
+                        <p class="text-xs text-slate-500 italic max-w-sm">
+                            <i class="fa-solid fa-circle-info mr-1 text-brand"></i> Note: The repository includes the compiled <code>.jar</code> file. You can easily run it on Replit's shell using the command <code>java -jar DungeonDive.jar</code>.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Code Snippet Viewer (JS Tabs) -->
+                    <div class="lg:w-1/2 bg-dark rounded-xl border border-slate-800 shadow-2xl overflow-hidden flex flex-col">
+                        <div class="flex bg-slate-800/50 border-b border-slate-800 overflow-x-auto">
+                            <button onclick="openTab(event, 'tab-skill')" class="tab-btn active px-4 py-3 text-sm font-mono text-slate-400 hover:text-white transition-colors whitespace-nowrap">SkillSystem.java</button>
+                            <button onclick="openTab(event, 'tab-battle')" class="tab-btn px-4 py-3 text-sm font-mono text-slate-400 hover:text-white transition-colors whitespace-nowrap">BattleSystem.java</button>
+                        </div>
+                        <div class="p-4 overflow-y-auto max-h-[400px]">
+                            <!-- Tab 1 Content -->
+                            <div id="tab-skill" class="tab-content block">
+<pre><code class="text-sm font-mono text-emerald-300">abstract class WeaponSkill extends Skill {
+    abstract public boolean useSkill(Player player, Enemy enemy);
+    
+    static class Slash extends WeaponSkill {
+        @Override
+        public boolean useSkill(Player player, Enemy enemy) {
+            if(!isOnCooldown()) {
+                <span class="text-slate-500">// Modular Debuff Application</span>
+                Debuff bleedDebuff = new Debuff.Bleed();
+                bleedDebuff.setEffect(true);
+                bleedDebuff.setNumberOfTurn(3);
+                enemy.addDebuff(bleedDebuff);
+
+                int damage = (int) (player.getCurrentAttack() * 1.3);
+                int newHp = enemy.getHp() - damage;
+                enemy.setHp(newHp);
+                
+                <span class="text-slate-500">// State Management</span>
+                setCooldown(3);
+                setOnCooldown(true);
+                return true;
+            }
+            return false;
+        }
+    }
+}</code></pre>
+                            </div>
+                            <!-- Tab 2 Content -->
+                            <div id="tab-battle" class="tab-content hidden">
+<pre><code class="text-sm font-mono text-blue-300">public static double calculateBlockedDamage(int attack, int defense) {
+    double damagedBlocked;
+    if (defense >= attack) {
+        double value = (double) defense / attack;
+        value = 100.0 / value;
+        double percentage = value / 100.0;
+        damagedBlocked = percentage;
+    } else {
+        double value = defense / attack;
+        damagedBlocked = value;
+    }
+    return damagedBlocked;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: GameMaker -->
+            <div>
+                <div class="flex flex-col lg:flex-row-reverse gap-10">
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl font-bold text-white mb-2">2D Horror Experience</h3>
+                        <p class="text-brand font-mono text-sm mb-6">GameMaker (GML) • Lead Programmer</p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Serving as the Lead Programmer for a team-developed 2D horror game. My main responsibilities involve guiding the technical architecture, untangling complex "God objects", and rescuing disorganized scripts into clean, encapsulated functions. 
+                        </p>
+                        <ul class="space-y-2 mb-8 text-slate-300">
+                            <li><i class="fa-solid fa-caret-right text-brand mr-2"></i> <strong>Refactoring Codebases:</strong> Encapsulated messy interaction scripts into reusable <code>on_interact</code> functions, enforcing DRY principles.</li>
+                            <li><i class="fa-solid fa-caret-right text-brand mr-2"></i> <strong>Complex UI Logic:</strong> Engineered the <code>obj_textbox</code> state machine managing typewriter effects, mouse hover mapping (`point_in_rectangle`), and dual array modes.</li>
+                        <li><i class="fa-solid fa-caret-right text-brand mr-2"></i> <strong>Version Control Leader:</strong> Guided teammates through GitHub Desktop, untangling merge conflicts and logical errors.</li>
+                    </ul>
+                </div>
+                
+                <!-- Replaced Image Carousel -->
+                <div class="lg:w-1/2 bg-card rounded-xl border border-slate-800 overflow-hidden shadow-2xl relative group h-[300px] md:h-[400px]">
+                    
+                    <!-- Carousel Images -->
+                    <div id="carousel" class="relative w-full h-full">
+                        <img src="MainMenu.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10" alt="Horror Title Screen">
+                        <img src="CharacterSelection.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0" alt="Character Selection">
+                        <img src="ClueTracker.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0" alt="Memory Fragments Clue Tracker">
+                        <img src="Puzzle1.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0" alt="Puzzle UI">
+                        <img src="TornImage.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0" alt="Torn Image Story Scene">
+                        <img src="ChaseScene.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0" alt="Gameplay Hallway">
+                        <img src="Knife Scene.png" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0" alt="Knife Scene">
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-3 rounded-full transition-all z-20 opacity-0 group-hover:opacity-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-3 rounded-full transition-all z-20 opacity-0 group-hover:opacity-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
+        <p class="text-slate-400 mb-10 text-lg">
+            I am currently looking for opportunities as a Game Programmer or Systems Developer. Whether you have a question about my OOP architecture or just want to talk code, feel free to reach out.
+        </p>
+        <a href="https://discordapp.com/users/YOUR_DISCORD_ID" target="_blank" class="inline-flex items-center justify-center bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg">
+            <i class="fa-brands fa-discord mr-3 text-2xl"></i> Connect on Discord
+        </a>
+    </section>
+
+    <footer class="text-center py-6 border-t border-slate-800 text-slate-500 text-sm">
+        <p>&copy; 2026 Cuternest. Designed for Logic & Systems.</p>
+    </footer>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+        // Tab system for Code Viewer
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Remove active class from buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show current tab and add active class to clicked button
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Image Carousel Logic
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName("carousel-slide");
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('opacity-100', 'z-10');
+                slides[i].classList.add('opacity-0', 'z-0');
+            }
+            slides[index].classList.remove('opacity-0', 'z-0');
+            slides[index].classList.add('opacity-100', 'z-10');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    </script>
+</body>
+</html>
